@@ -24,10 +24,16 @@ struct CardView: View {
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .padding(.vertical, 5)
                         Spacer()
-                        Text(event.date)
-                            .font(.subheadline)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        VStack {
+                            Text(event.date)
+                                .font(.subheadline)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundStyle(Color(red: 80/255, green: 80/255, blue: 80/255))
+                            Text("\(event.time)\(event.isPM ? "PM" : "AM")")
+                                .font(.subheadline)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundStyle(Color(red: 80/255, green: 80/255, blue: 80/255))
+                        }
                     }
                     
                     Text(event.description)

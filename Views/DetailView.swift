@@ -47,7 +47,7 @@ struct DetailView: View {
                                 .fontWeight(.bold)
                             Spacer()
                             VStack {
-                                Text("\(event.date) at \(event.time) \(event.isPM ? "PM" : "AM")")
+                                Text("\(event.date) at \(event.time)\(event.isPM ? "PM" : "AM")")
                                     .fontWeight(.bold)
                                     .font(.subheadline)
                                 .foregroundStyle(Color(red: 70/255, green: 70/255, blue: 70/255))
