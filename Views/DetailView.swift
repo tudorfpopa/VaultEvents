@@ -22,6 +22,7 @@ struct ActiveIdentifier: Identifiable {
 struct DetailView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var alertID: ActiveIdentifier?
+    @Environment(\.openURL) private var openURL
     let event: Event
     
     let store = EKEventStore()
@@ -89,7 +90,9 @@ struct DetailView: View {
                             }
                             Spacer()
                             Button {
-                                // TODO: action for RSVP button
+                                if let url = URL(string: event.RSVPLink) {
+                                    openURL(url)
+                                }
                             } label: {
                                 HStack {
                                     Image(systemName: "text.badge.checkmark")
