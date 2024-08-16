@@ -222,5 +222,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(event: Event(title: "Test event", description: "This is a test.", images: "testsimage", date: "1/1/1111", time: "5:55", membersOnly: true, isPM: true, location: "Humanities Building"))
+    DetailView(event: Event(title: "Test event", description: "This is a test.", images: "testsimage", date: "1/1/1111", time: "5:55", membersOnly: true, isPM: true, location: "Humanities Building", RSVPLink: "https://www.thevaultuwmadison.com/"))
 }

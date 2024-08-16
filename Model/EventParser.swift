@@ -110,7 +110,7 @@ struct EventParser {
                                     }
                                 }
                                 
-                                let toCreate = Event(title: title, description: description, images: images, date: date, time: time, membersOnly: membersOnly, isPM: isPM, location: location)
+                                let toCreate = Event(title: title, description: description, images: images, date: date, time: time, membersOnly: membersOnly, isPM: isPM, location: location, RSVPLink: "https://www.thevaultuwmadison.com/")
                                 Event.parsedEvents.append(toCreate)
                                 print(Event.parsedEvents)
                                 print(toCreate)
